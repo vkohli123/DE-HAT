@@ -1,2 +1,5 @@
 # DE-HAT
 Social Distancing Hat (coded in arduino programming language) is used to measure distance using an ultrasonic sensor.
+This code is written in the Arduino programming language and is used to measure distance using an ultrasonic sensor. The ultrasonic sensor is connected to the A4 and A5 pins on the Arduino board, which are designated as the "pingTrigPin" and "pingEchoPin" respectively. The code sets up a serial communication with a baud rate of 9600 and declares two output pins, led and buz1, which are used to control an LED and a buzzer.
+In the loop function, the code sends a trigger pulse to the ultrasonic sensor and measures the duration of the echo pulse that is returned. This duration is then used to calculate the distance to an object in centimeters using the microsecondsToCentimeters() function.
+The distance is then checked against a threshold of 50 cm, and if it is less than or equal to that distance, the LED and buzzer are turned on for a short duration, and then turned off for a duration that is proportional to the distance. Finally, the distance is printed to the serial monitor.
